@@ -1,13 +1,13 @@
 // Bayside Vinyl Color Scheme
-$mintGreen: #b8dacc;
-$milkChocolate: #6d5e4c;
+$scandal: #b0d8da;
+$coralCandy: #f3d0cc;
 $frostyWhite: #fdfdfd;
 $sandBrown: #d3cab8;
-$fontColor: black;
+$fontColor: rgb(31, 5, 5);
 
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    background-color: $mintGreen;
+    background-color: $scandal;
     font: 100% montserrat, sans-serif;
 }
