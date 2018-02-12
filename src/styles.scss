@@ -1,1 +1,13 @@
+// Bayside Vinyl Color Scheme
+$mintGreen: #b8dacc;
+$milkChocolate: #6d5e4c;
+$frostyWhite: #fdfdfd;
+$sandBrown: #d3cab8;
+$fontColor: black;
+
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: $mintGreen;
+    font: 100% montserrat, sans-serif;
+}
