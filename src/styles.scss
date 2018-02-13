@@ -1,10 +1,34 @@
 // Fonts
 @font-face {
     font-family: 'CaviarDreams';
+    src: url('assets/fonts/CaviarDreams.ttf');
+    src: url('assets/fonts/CaviarDreams.ttf?iefix') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CaviarDreams_Italic';
+    src: url('assets/fonts/CaviarDreams_Italic.ttf');
+    src: url('assets/fonts/CaviarDreams_Italic.ttf?iefix') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CaviarDreams_Bold';
     src: url('assets/fonts/CaviarDreams_Bold.ttf');
     src: url('assets/fonts/CaviarDreams_Bold.ttf?iefix') format('truetype');
     font-weight: bold;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'CaviarDreams_CaviarDreams_BoldItalic';
+    src: url('assets/fonts/CaviarDreams_BoldItalic.ttf');
+    src: url('assets/fonts/CaviarDreams_BoldItalic.ttf?iefix') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }
 
 // Bayside Vinyl Color Scheme
@@ -19,6 +43,7 @@ $fontColor: black;
 body {
     background-color: $scandal;
     font: 100% montserrat, sans-serif;
+    color: $coralCandy;
 }
 
 .footer-font {
@@ -27,7 +52,7 @@ body {
 }
 
 h2 {
-    font-family: 'CaviarDreams';
+    font-family: 'CaviarDreams_Bold';
 }
 
 
