@@ -1,13 +1,156 @@
 // Bayside Vinyl Color Scheme
 $scandal: #b0d8da;
 $coralCandy: #f3d0cc;
-$frostyWhite: #fdfdfd;
+$frostyWhite: #ffffff;
 $sandBrown: #d3cab8;
-$fontColor: rgb(31, 5, 5);
+$fontColor: black;
 
 /* You can add global styles to this file, and also import other style files */
 
 body {
     background-color: $scandal;
     font: 100% montserrat, sans-serif;
+}
+
+
+/*Custom Boostrap Navbar*/
+
+$dropDown: true;
+.navbar {
+    background-color: $scandal;
+    .navbar-brand {
+        color: $frostyWhite;
+        &:hover,
+        &:focus {
+            color: $frostyWhite;
+        }
+    }
+    .navbar-text {
+        color: $frostyWhite;
+    }
+    .navbar-nav {
+        .nav-link {
+            color: $frostyWhite;
+            border-radius: .25rem;
+            margin: 0 0.25em;
+            &:not(.disabled) {
+                &:hover,
+                &:focus {
+                    color: $frostyWhite;
+                }
+            }
+        }
+        @if ($dropDown) {
+            .dropdown-menu {
+                background-color: $scandal;
+                border-color: $coralCandy;
+                .dropdown-item {
+                    color: $frostyWhite;
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        color: $frostyWhite;
+                        background-color: $coralCandy;
+                    }
+                }
+                .dropdown-divider {
+                    background-color: $coralCandy;
+                }
+            }
+        }
+        .nav-item.active,
+        .nav-item.show {
+            .nav-link,
+            .nav-link:hover,
+            .nav-link:focus {
+                color: $frostyWhite;
+                background-color: $coralCandy;
+            }
+        }
+    }
+    .navbar-toggle {
+        border-color: $coralCandy;
+        &:hover,
+        &:focus {
+            background-color: $coralCandy;
+        }
+        .navbar-toggler-icon {
+            color: $frostyWhite;
+        }
+    }
+    .navbar-collapse,
+    .navbar-form {
+        border-color: $frostyWhite;
+    }
+    .navbar-link {
+        color: $frostyWhite;
+        &:hover {
+            color: $frostyWhite;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar .navbar-nav .open .dropdown-menu {
+        .dropdown-item {
+            color: $frostyWhite;
+            &:hover,
+            &:focus {
+                color: $frostyWhite;
+            }
+        }
+        .dropdown-item.active {
+            color: $frostyWhite;
+            background-color: $coralCandy;
+        }
+    }
+}
+
+
+/*Custom Bootstrap Button*/
+
+.btn-bvSpotify {
+    color: $frostyWhite;
+    background-color: $scandal;
+    border-color: $frostyWhite;
+}
+
+.btn-bvSpotify:hover,
+.btn-bvSpotify:focus,
+.btn-bvSpotify:active,
+.btn-bvSpotify.active,
+.open .dropdown-toggle.btn-bvSpotify {
+    color: $frostyWhite;
+    background-color: $coralCandy;
+    border-color: $frostyWhite;
+}
+
+.btn-bvSpotify:active,
+.btn-bvSpotify.active,
+.open .dropdown-toggle.btn-bvSpotify {
+    background-image: none;
+}
+
+.btn-bvSpotify.disabled,
+.btn-bvSpotify[disabled],
+fieldset[disabled] .btn-bvSpotify,
+.btn-bvSpotify.disabled:hover,
+.btn-bvSpotify[disabled]:hover,
+fieldset[disabled] .btn-bvSpotify:hover,
+.btn-bvSpotify.disabled:focus,
+.btn-bvSpotify[disabled]:focus,
+fieldset[disabled] .btn-bvSpotify:focus,
+.btn-bvSpotify.disabled:active,
+.btn-bvSpotify[disabled]:active,
+fieldset[disabled] .btn-bvSpotify:active,
+.btn-bvSpotify.disabled.active,
+.btn-bvSpotify[disabled].active,
+fieldset[disabled] .btn-bvSpotify.active {
+    background-color: $scandal;
+    border-color: $frostyWhite;
+}
+
+.btn-bvSpotify .badge {
+    color: $scandal;
+    background-color: $frostyWhite;
 }
