@@ -12,9 +12,12 @@ body {
     font: 100% montserrat, sans-serif;
 }
 
+.footer-font {
+    font-size: 12px;
+    color: $frostyWhite;
+}
 
 /*Custom Boostrap Navbar*/
-
 $dropDown: true;
 .navbar {
     background-color: $scandal;
