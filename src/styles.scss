@@ -32,18 +32,18 @@
 }
 
 // Bayside Vinyl Color Scheme
-$scandal: #b0d8da;
-$coralCandy: #f3d0cc;
-$frostyWhite: #ffffff;
+$eunry: #C7A7A4;
+$sinbad: #A8D4D6;
+$frostyWhite: #f9f9f9;
 $sandBrown: #d3cab8;
 $fontColor: black;
 
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    background-color: $scandal;
+    background-color: $sinbad;
     font: 100% montserrat, sans-serif;
-    color: $coralCandy;
+    color: $eunry;
 }
 
 .footer-font {
@@ -52,7 +52,7 @@ body {
 }
 
 h2 {
-    font-family: 'CaviarDreams_Bold';
+    font-family: 'CaviarDreams_bold';
 }
 
 
@@ -60,7 +60,7 @@ h2 {
 
 $dropDown: true;
 .navbar {
-    background-color: $scandal;
+    background-color: $sinbad;
     font-family: 'CaviarDreams';
     .navbar-brand {
         color: $frostyWhite;
@@ -86,19 +86,19 @@ $dropDown: true;
         }
         @if ($dropDown) {
             .dropdown-menu {
-                background-color: $scandal;
-                border-color: $coralCandy;
+                background-color: $sinbad;
+                border-color: $eunry;
                 .dropdown-item {
                     color: $frostyWhite;
                     &:hover,
                     &:focus,
                     &.active {
                         color: $frostyWhite;
-                        background-color: $coralCandy;
+                        background-color: $eunry;
                     }
                 }
                 .dropdown-divider {
-                    background-color: $coralCandy;
+                    background-color: $eunry;
                 }
             }
         }
@@ -108,15 +108,15 @@ $dropDown: true;
             .nav-link:hover,
             .nav-link:focus {
                 color: $frostyWhite;
-                background-color: $coralCandy;
+                background-color: $eunry;
             }
         }
     }
     .navbar-toggle {
-        border-color: $coralCandy;
+        border-color: $eunry;
         &:hover,
         &:focus {
-            background-color: $coralCandy;
+            background-color: $eunry;
         }
         .navbar-toggler-icon {
             color: $frostyWhite;
@@ -145,7 +145,7 @@ $dropDown: true;
         }
         .dropdown-item.active {
             color: $frostyWhite;
-            background-color: $coralCandy;
+            background-color: $eunry;
         }
     }
 }
@@ -155,7 +155,7 @@ $dropDown: true;
 
 .btn-bvSpotify {
     color: $frostyWhite;
-    background-color: $scandal;
+    background-color: $sinbad;
     border-color: $frostyWhite;
 }
 
@@ -165,7 +165,7 @@ $dropDown: true;
 .btn-bvSpotify.active,
 .open .dropdown-toggle.btn-bvSpotify {
     color: $frostyWhite;
-    background-color: $coralCandy;
+    background-color: $eunry;
     border-color: $frostyWhite;
 }
 
@@ -190,11 +190,11 @@ fieldset[disabled] .btn-bvSpotify:active,
 .btn-bvSpotify.disabled.active,
 .btn-bvSpotify[disabled].active,
 fieldset[disabled] .btn-bvSpotify.active {
-    background-color: $scandal;
+    background-color: $sinbad;
     border-color: $frostyWhite;
 }
 
 .btn-bvSpotify .badge {
-    color: $scandal;
+    color: $sinbad;
     background-color: $frostyWhite;
 }
