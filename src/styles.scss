@@ -1,3 +1,12 @@
+// Fonts
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('assets/fonts/CaviarDreams_Bold.ttf');
+    src: url('assets/fonts/CaviarDreams_Bold.ttf?iefix') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 // Bayside Vinyl Color Scheme
 $scandal: #b0d8da;
 $coralCandy: #f3d0cc;
@@ -17,10 +26,13 @@ body {
     color: $frostyWhite;
 }
 
+
 /*Custom Boostrap Navbar*/
+
 $dropDown: true;
 .navbar {
     background-color: $scandal;
+    font-family: 'CaviarDreams';
     .navbar-brand {
         color: $frostyWhite;
         &:hover,
