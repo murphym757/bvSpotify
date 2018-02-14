@@ -49,10 +49,42 @@ body {
 .footer-font {
     font-size: 12px;
     color: $frostyWhite;
+    font-family: 'CaviarDreams';
 }
 
 h2 {
     font-family: 'CaviarDreams_bold';
+}
+
+// form
+.form-control {
+    background-color: $eunry;
+    color: $frostyWhite;
+    font-family: 'CaviarDreams';
+    text-align: center;
+}
+
+.form-control::-moz-placeholder {
+    color: $frostyWhite;
+}
+
+.form-control:-ms-input-placeholder {
+    color: $frostyWhite;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: $frostyWhite;
+}
+
+.form-control:focus {
+    border-style: solid;
+    border-color: $eunry;
+    background-color: $eunry;
+    color: $frostyWhite;
+}
+
+.form-control {
+    color: $frostyWhite;
 }
 
 

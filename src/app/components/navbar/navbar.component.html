@@ -1,16 +1,20 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
     <button class="navbar-toggler btn-bvSpotify navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand lead" href="#">
+    <a class="navbar-brand lead" routerLink="/" routerLinkActive="active">
         <img src="assets/images/BVSpotifyIcon.png" width="40" height="40" alt="">
         BVSpotify</a>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav lead">
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
             </li>
         </ul>
+         <form class="nav navbar-nav navbar-center form-inline ml-auto lead">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-bvSpotify my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
     </div>
 </nav>
