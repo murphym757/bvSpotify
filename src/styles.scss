@@ -56,6 +56,10 @@ h2 {
     font-family: 'CaviarDreams_bold';
 }
 
+.searchHeader2 {
+    color: $frostyWhite;
+}
+
 // form
 .form-control {
     background-color: $eunry;
@@ -86,7 +90,6 @@ h2 {
 .form-control {
     color: $frostyWhite;
 }
-
 
 /*Custom Boostrap Navbar*/
 
@@ -181,7 +184,6 @@ $dropDown: true;
         }
     }
 }
-
 
 /*Custom Bootstrap Button*/
 
