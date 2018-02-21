@@ -56,16 +56,48 @@ h2 {
     font-family: 'CaviarDreams_bold';
 }
 
+// form
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: $sinbad;
+}
+
+a {
+    color: $frostyWhite;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $eunry inset;
+    -webkit-text-fill-color: $frostyWhite !important;
+}
+
+.search-res {
+    background-color: $eunry;
+    color: $sinbad;
+}
+
 .searchHeader2 {
     color: $frostyWhite;
 }
 
-// form
-.form-control {
+.form-control,
+.artistName {
     background-color: $eunry;
     color: $frostyWhite;
     font-family: 'CaviarDreams';
     text-align: center;
+}
+
+.genreName {
+    color: $sinbad;
+    font-family: 'CaviarDreams';
+}
+
+.genreNames {
+    color: $frostyWhite;
+    font-family: 'CaviarDreams_Bold';
 }
 
 .form-control::-moz-placeholder {
@@ -90,6 +122,7 @@ h2 {
 .form-control {
     color: $frostyWhite;
 }
+
 
 /*Custom Boostrap Navbar*/
 
@@ -184,6 +217,7 @@ $dropDown: true;
         }
     }
 }
+
 
 /*Custom Bootstrap Button*/
 
