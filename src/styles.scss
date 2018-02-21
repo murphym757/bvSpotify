@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: 'CaviarDreams_CaviarDreams_BoldItalic';
+    font-family: 'CaviarDreams_BoldItalic';
     src: url('assets/fonts/CaviarDreams_BoldItalic.ttf');
     src: url('assets/fonts/CaviarDreams_BoldItalic.ttf?iefix') format('truetype');
     font-weight: bold;
@@ -54,6 +54,24 @@ body {
 
 h2 {
     font-family: 'CaviarDreams_bold';
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $frostyWhite;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.searchHeader {
+    font-family: 'CaviarDreams_bold';
+}
+
+.searchExplanation {
+    font-family: 'CaviarDreams_bold';
+    font-weight: 900;
 }
 
 // form
@@ -93,11 +111,13 @@ input:-webkit-autofill {
 .genreName {
     color: $sinbad;
     font-family: 'CaviarDreams';
+    font-weight: 900;
 }
 
 .genreNames {
     color: $frostyWhite;
-    font-family: 'CaviarDreams_Bold';
+    font-family: 'CaviarDreams_Italic';
+    font-weight: 900;
 }
 
 .form-control::-moz-placeholder {

@@ -2,7 +2,7 @@
 <h1 class="searchHeader lead">
     How does BVSpotify work? 
 </h1>
-<p class="searchExplanation">Simply use the search field in the navbar and BVSpotify will do the rest.</p>
+<p class="searchExplanation lead">Simply use the search field in the navbar and BVSpotify will do the rest.</p>
 <form class="nav navbar-nav ml-auto lead">
     <input class="form-control mr-sm-2" [(ngModel)]="searchStr" name="searchStr" (keyup)="searchMusic()" type="text" placeholder="Search">
 </form>
@@ -11,7 +11,7 @@
             <div *ngFor="let res of searchRes">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="search-res well pt-2 pb-2">
+                        <div class="search-res well pt-2 pb-3">
                             <h4 class="artistName lead"><a href="#">{{ res.name }}</a></h4>
                             <div>
                                 <strong class="genreName lead">Genres: </strong>
@@ -21,6 +21,7 @@
                     </div>
                 </div>
             </div>
+            <hr />
         </div>
     </div>
 </div>
