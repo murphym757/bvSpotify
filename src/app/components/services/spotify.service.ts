@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class SpotifyService{
     private searchUrl: string;
+    private artistUrl: string;
     private redirect_uri: 'http://localhost:4200';
     private client_id = '4fc12f7de8ad49819e3130f3c2821d6a';
     private client_secret = 'd0ef37d290a74cab81c47a790b42a62e';
@@ -35,6 +36,14 @@ export class SpotifyService{
         let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + token);
         return this._http.get(this.searchUrl, { headers: headers })
+            .map((res: Response) => res.json())
+    }
+    getArtist(id: string, token: string) {
+        console.log(this.encoded);
+        this.artistUrl = 'https://api.spotify.com/v1/artists/' + id;
+        let headers = new Headers();
+        headers.append('Authorization', 'Bearer ' + token);
+        return this._http.get(this.artistUrl, { headers: headers })
             .map((res: Response) => res.json())
     }
 }
