@@ -65,6 +65,12 @@ hr {
     padding: 0;
 }
 
+.artistName2 {
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'CaviarDreams_bold';
+}
+
 .searchHeader {
     font-family: 'CaviarDreams_bold';
 }
@@ -141,6 +147,18 @@ input:-webkit-autofill {
 
 .form-control {
     color: $frostyWhite;
+}
+
+
+/*Image Effect*/
+
+.logoImage:hover {
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 0.5s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
 }
 
 
