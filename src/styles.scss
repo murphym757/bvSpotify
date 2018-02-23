@@ -149,8 +149,54 @@ input:-webkit-autofill {
     color: $frostyWhite;
 }
 
+li {
+    display: inline-block;
+}
+
+
+/*Artist Page*/
+
+.artist-header {
+    border-bottom: solid 1px $frostyWhite;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.artistPageAlbum {
+    color: $frostyWhite;
+    font-family: 'CaviarDreams';
+    font-weight: 900;
+}
+
+.artist-thumb {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.artistPageArtist {
+    color: $eunry;
+    font-family: 'CaviarDreams';
+    font-weight: 900;
+}
+
+.artistPageGenre {
+    color: $frostyWhite;
+    font-family: 'CaviarDreams_Italic';
+}
+
+.img-thumbnail {
+    background-color: $eunry;
+}
+
 
 /*Image Effect*/
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
 
 .logoImage:hover {
     -moz-animation-duration: 1s;
@@ -263,6 +309,8 @@ $dropDown: true;
     color: $frostyWhite;
     background-color: $sinbad;
     border-color: $frostyWhite;
+    font-family: 'CaviarDreams';
+    font-weight: 900;
 }
 
 .btn-bvSpotify:hover,
@@ -271,7 +319,7 @@ $dropDown: true;
 .btn-bvSpotify.active,
 .open .dropdown-toggle.btn-bvSpotify {
     color: $frostyWhite;
-    background-color: $eunry;
+    background-color: $frostyWhite;
     border-color: $frostyWhite;
 }
 

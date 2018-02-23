@@ -1,5 +1,30 @@
 <div class="container">
-    <div class="artistName2 lead" *ngIf="artist">
-        {{ artist.name }}
+    <div *ngIf="artist">
+        <header class="artist-header">
+            <li>
+            <div *ngIf="artist.images.length > 0">
+                <img class="artist-thumb rounded mx-auto d-block float-left" src="{{ artist.images[0].url }}">
+            </div>
+            </li>
+            <li>
+            <h1 class="artistPageArtist">{{ artist.name }}</h1>
+            <p class="artistPageGenre" *ngIf="artist.genres.length > 0">
+                Genres: <span *ngFor="let genre of artist.genres">{{ genre }}</span>
+            </p>
+            </li>
+        </header>
+        <div class="artist-albums">
+            <div class="row pb-3">
+                <div class="col-md-3 pb-3" *ngFor="let album of albums">
+                    <div class="well album">
+                        <div *ngIf="album.images.length > 0">
+                            <img class="album-thumb img-thumbnail" src="{{ album.images[0].url }}">
+                            <h4 class="artistPageAlbum">{{ album.name }}</h4>
+                            <a class="btn btn-bvSpotify btn-block buttonFont">Album Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
