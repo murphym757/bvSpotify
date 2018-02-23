@@ -8,7 +8,7 @@ const express = require('express'),
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://bvspotify.herokuapp.com/');
+    res.setHeader('Access-Control-Allow-Origin', 'http://www.mocky.io/v2/5a9041052f000056006cabdc');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
