@@ -15,12 +15,12 @@
                         <h2>Album Tracks</h2>
                         <div *ngFor="let track of album.tracks.items">
                             <div class="well">
-                                <div class="row">
+                                <div class="row pb-4">
                                     <div class="col-md-4">
                                         <h5>{{ track.track_number }}: {{ track.name }}</h5>
                                     </div>
                                     <div class="col-md-8">
-                                        <a href="{{ track.preview_url }}" target="_blank">Preview Track</a>
+                                        <a class="albumPagePreview" href="{{ track.preview_url }}" target="_blank"><i class="far fa-play-circle"></i>Preview Track</a>
                                     </div>     
                                 </div>
                             </div>
