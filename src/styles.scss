@@ -191,6 +191,19 @@ li {
 }
 
 
+/*Album Page*/
+
+.albumPageName {
+    color: $eunry;
+    font-family: 'CaviarDreams';
+    font-weight: 900;
+}
+
+.albumPageRelease {
+    color: $frostyWhite;
+    font-family: 'CaviarDreams_Italic';
+}
+
 /*Image Effect*/
 
 .responsive {
@@ -307,7 +320,7 @@ $dropDown: true;
 
 .btn-bvSpotify {
     color: $frostyWhite;
-    background-color: $sinbad;
+    background-color: $eunry;
     border-color: $frostyWhite;
     font-family: 'CaviarDreams';
     font-weight: 900;
@@ -318,9 +331,9 @@ $dropDown: true;
 .btn-bvSpotify:active,
 .btn-bvSpotify.active,
 .open .dropdown-toggle.btn-bvSpotify {
-    color: $frostyWhite;
+    color: $eunry;
     background-color: $frostyWhite;
-    border-color: $frostyWhite;
+    border-color: $eunry;
 }
 
 .btn-bvSpotify:active,

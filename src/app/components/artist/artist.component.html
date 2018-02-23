@@ -20,7 +20,7 @@
                         <div *ngIf="album.images.length > 0">
                             <img class="album-thumb img-thumbnail" src="{{ album.images[0].url }}">
                             <h4 class="artistPageAlbum">{{ album.name }}</h4>
-                            <a class="btn btn-bvSpotify btn-block buttonFont">Album Details</a>
+                            <a class="btn btn-bvSpotify btn-block buttonFont" routerLink="/album/{{ album.id }}">Album Details</a>
                         </div>
                     </div>
                 </div>

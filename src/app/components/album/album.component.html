@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="albumPage" *ngIf="album">
+        <header class="album-header">
+            <div class="row">
+                <div class="col-md-4">
+                    <div *ngIf="album.images.length > 0">
+                        <img class="album-thumb img-thumbnail" src="{{ album.images[0].url }}">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h4 class="albumPageName">{{ album.name }}</h4>
+                    <h5 class="albumPageRelease pb-4 pt-2">{{ album.release_date }}</h5>
+                    <a class="btn btn-bvSpotify btn-block buttonFont" href="{{ album.external_urls.spotify }}" target="_blank">View In Spotify</a>
+                    <div class="albumPageTracks pt-4">
+                        <h2>Album Tracks</h2>
+                        <div *ngFor="let track of album.tracks.items">
+                            <div class="well">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>{{ track.track_number }}: {{ track.name }}</h5>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a href="{{ track.preview_url }}" target="_blank">Preview Track</a>
+                                    </div>     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>

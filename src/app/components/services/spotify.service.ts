@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 export class SpotifyService{
     private searchUrl: string;
     private artistUrl: string;
+    private albumsUrl: string;
     private albumUrl: string;
     private redirect_uri: 'http://localhost:4200';
     private client_id = '4fc12f7de8ad49819e3130f3c2821d6a';
@@ -49,7 +50,15 @@ export class SpotifyService{
     }
     getAlbums(artistId: string, token: string) {
         console.log(this.encoded);
-        this.albumUrl = 'https://api.spotify.com/v1/artists/' + artistId + '/albums?album_type=album&marker=US&limit=32';
+        this.albumsUrl = 'https://api.spotify.com/v1/artists/' + artistId + '/albums?album_type=album&marker=US&limit=32';
+        let headers = new Headers();
+        headers.append('Authorization', 'Bearer ' + token);
+        return this._http.get(this.albumsUrl, { headers: headers })
+            .map((res: Response) => res.json())
+    }
+    getAlbum(id: string, token: string) {
+        console.log(this.encoded);
+        this.albumUrl = 'https://api.spotify.com/v1/albums/' + id;
         let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + token);
         return this._http.get(this.albumUrl, { headers: headers })
