@@ -4,12 +4,25 @@ const express = require('express'),
       router = express.Router(),
       app = express();
 
-// allow-cors
+// Add headers
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://bvspotify.herokuapp.com/");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'https://bvspotify.herokuapp.com/');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
     next();
-})
+});
 
 // Serve only the static files from the dist directory
 app.use(express.static(__dirname + '/dist'));
