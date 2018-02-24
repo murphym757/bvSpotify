@@ -1,28 +1,16 @@
 //Install express server
-const express = require('express'),
-      cors = require('cors'),
-      router = express.Router(),
-      app = express();
+const express = require('express');
+const cors = require('cors');
+const router = express.Router();
+const app = express();
 
-var allowedOrigins = ['http://localhost:4200',
-    'https://bvspotify.herokuapp.com'];
-
-app.use(cors({
-    origin: function (origin, callback) {
-
-        // allow requests with no origin 
-        // (like mobile apps or curl requests)
-        if (!origin) return callback(null, true);
-
-        if (allowedOrigins.indexOf(origin) === -1) {
-            var msg = 'The CORS policy for this site does not ' +
-                'allow access from the specified Origin.';
-            return callback(new Error(msg), false);
-        }
-
-        return callback(null, true);
-    }
-}));
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", 'http://bvspotify.herokuapp.com/'); //<-- you can change this with a specific url like http://localhost:4200
+    res.header("Access-Control-Allow-Credentials", true);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+    next();
+});
 
 // Serve only the static files from the dist directory
 app.use(express.static(__dirname + '/dist'));
