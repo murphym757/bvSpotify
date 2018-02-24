@@ -1,8 +1,7 @@
 //Install express server
-const express = require('express');
-const cors = require('cors');
-const router = express.Router();
-const app = express();
+const express = require('express'),
+    app = express(),
+    cors = require('cors');
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
