@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { Http, Headers, Response, URLSearchParams } from '@angular/http';
+import { Http, Headers, Response, RequestOptions, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -15,18 +15,22 @@ export class SpotifyService{
     private encoded = btoa(this.client_id + ':' + this.client_secret);
     private base64 = 'BQDvRXTMPRswZmWeA9t1g-EUqjUvPwsmpcmx7b2zl3-_eHik100E1VB7tQ8S8m9O9WCR0-Gd672DPDrspHrIZscCSCWEGwKkwyOZRLXnjfVBarFME34VezR9sRSMuAEd-K5yKgVi4SBEYb6pmQ';
 
-    constructor(private _http:Http){
+    constructor(private http:Http){
 
     }
     getToken() {
         // let params : URLSearchParams = new URLSearchParams();
         // params.set('grant_type' , 'client_credentials');
         // let body = params.toString();
-        var params = ('grant_type=client_credentials');
-        var headers = new Headers();
+        const params = ('grant_type=client_credentials');
+        const headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
+        const options = new RequestOptions({ headers: headers });
         headers.append('Authorization', 'Basic ' + this.encoded);
-        headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        return this._http.post('https://accounts.spotify.com/api/token', params, { headers: headers })
+        headers.append('Accept', 'application/json');
+        headers.append('Access-Control-Allow-Origin', 'http://bvspotify.herokuapp.com');
+        headers.append('Access-Control-Allow-Credentials', 'true');
+        headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+        return this.http.post('https://accounts.spotify.com/api/token', params, options)
             .map(res => res.json());
     }
 
@@ -37,7 +41,7 @@ export class SpotifyService{
         this.searchUrl = 'https://api.spotify.com/v1/search?query=' + str + '&offset=0&limit=20&type=' + type + '&market=US';
         let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + token);
-        return this._http.get(this.searchUrl, { headers: headers })
+        return this.http.get(this.searchUrl, { headers: headers })
             .map((res: Response) => res.json())
     }
     getArtist(id: string, token: string) {
@@ -45,7 +49,7 @@ export class SpotifyService{
         this.artistUrl = 'https://api.spotify.com/v1/artists/' + id;
         let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + token);
-        return this._http.get(this.artistUrl, { headers: headers })
+        return this.http.get(this.artistUrl, { headers: headers })
             .map((res: Response) => res.json())
     }
     getAlbums(artistId: string, token: string) {
@@ -53,7 +57,7 @@ export class SpotifyService{
         this.albumsUrl = 'https://api.spotify.com/v1/artists/' + artistId + '/albums?album_type=album&marker=US&limit=32';
         let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + token);
-        return this._http.get(this.albumsUrl, { headers: headers })
+        return this.http.get(this.albumsUrl, { headers: headers })
             .map((res: Response) => res.json())
     }
     getAlbum(id: string, token: string) {
@@ -61,7 +65,7 @@ export class SpotifyService{
         this.albumUrl = 'https://api.spotify.com/v1/albums/' + id;
         let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + token);
-        return this._http.get(this.albumUrl, { headers: headers })
+        return this.http.get(this.albumUrl, { headers: headers })
             .map((res: Response) => res.json())
     }
 }
