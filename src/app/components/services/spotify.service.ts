@@ -8,7 +8,7 @@ export class SpotifyService{
     private artistUrl: string;
     private albumsUrl: string;
     private albumUrl: string;
-    private redirect_uri: 'http://localhost:4200';
+    private redirect_uri: 'http://localhost:8888/callback';
     private client_id = '4fc12f7de8ad49819e3130f3c2821d6a';
     private client_secret = 'd0ef37d290a74cab81c47a790b42a62e';
     private access_token: string;
@@ -23,13 +23,15 @@ export class SpotifyService{
         // params.set('grant_type' , 'client_credentials');
         // let body = params.toString();
         const params = ('grant_type=client_credentials');
-        const headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
+        const headers = new Headers();
         const options = new RequestOptions({ headers: headers });
         headers.append('Authorization', 'Basic ' + this.encoded);
         headers.append('Accept', 'application/json');
-        headers.append('Access-Control-Allow-Origin', 'http://bvspotify.herokuapp.com');
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        headers.append('allowedOrigins', 'http://bvspotify.herokuapp.com');
         headers.append('Access-Control-Allow-Credentials', 'true');
-        headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+        headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, HEAD');
+        headers.append('Access-Control-Max-Age', '3600');
         return this.http.post('https://accounts.spotify.com/api/token', params, options)
             .map(res => res.json());
     }
